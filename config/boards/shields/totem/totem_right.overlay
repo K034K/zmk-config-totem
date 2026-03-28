@@ -24,9 +24,12 @@
         chg-stat = &chg_stat;
     };
 
-    chg_stat: charger_status {
+    charger_status {
         compatible = "gpio-keys";
-        gpios = <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        label = "Charger status";
+
+        chg_stat: chg_stat {
+            gpios = <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            label = "Charger status";
+        };
     };
 };
