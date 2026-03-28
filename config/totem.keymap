@@ -58,6 +58,15 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33 34 35 36 37>;
             hold-trigger-on-release;
         };
+        ind_bat: ind_bat {
+            compatible = "zmk,behavior-rgbled-widget";
+            #binding-cells = <0>;
+        };
+        ind_con: ind_con {
+            compatible = "zmk,behavior-rgbled-widget";
+            #binding-cells = <0>;
+        };
+
     };
 
     combos {
