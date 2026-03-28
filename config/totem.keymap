@@ -23,8 +23,6 @@
 #define TVP1 4
 #define TVP2 5
 
-&ind_con 
-&ind_bat
 
 &mt {
     quick-tap-ms = <100>;
