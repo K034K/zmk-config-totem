@@ -32,10 +32,8 @@
     flavor = "tap-preferred";
     tapping-term-ms = <170>;
 };
-\
- {
-    behaviors {
-        hml: homerow_mods_left {
+
+        &hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -47,7 +45,7 @@
             hold-trigger-on-release;
         };
 
-        hmr: homerow_mods_right {
+        &hmr: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -58,8 +56,8 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
             hold-trigger-on-release;
         };
-    };
 
+\
  {
     combos {
         compatible = "zmk,combos";
