@@ -23,7 +23,6 @@
 #define TVP1 4
 #define TVP2 5
 
-
 &mt {
     quick-tap-ms = <100>;
     global-quick-tap;
@@ -58,15 +57,16 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33 34 35 36 37>;
             hold-trigger-on-release;
         };
+
         ind_bat: ind_bat {
             compatible = "zmk,behavior-rgbled-widget";
             #binding-cells = <0>;
         };
+
         ind_con: ind_con {
             compatible = "zmk,behavior-rgbled-widget";
             #binding-cells = <0>;
         };
-
     };
 
     combos {
@@ -177,7 +177,7 @@
 
             bindings = <
         &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp RA(U)   &kp SQT     &kp DQT
-        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
+        &kp RA(A)    &trans       &kp RA(S)  &ind_bat  &ind_con     &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
 &trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
                                   &trans     &gif      &mo ADJ      &trans        &kp C_PP        &trans
             >;
