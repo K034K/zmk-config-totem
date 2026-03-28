@@ -23,8 +23,8 @@
 #define TVP1 4
 #define TVP2 5
 
-&ind_con 
-&ind_bat
+&ind_con { };
+&ind_bat { };
 
 &mt {
     quick-tap-ms = <100>;
@@ -57,8 +57,7 @@
             hold-trigger-on-release;
         };
 
-\
- {
+/ {
     combos {
         compatible = "zmk,combos";
 
