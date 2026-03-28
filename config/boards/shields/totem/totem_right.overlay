@@ -19,3 +19,14 @@
         , <&xiao_d 4 GPIO_ACTIVE_HIGH>
         ;
 };
+/ {
+    aliases {
+        chg-stat = &chg_stat;
+    };
+
+    chg_stat: charger_status {
+        compatible = "gpio-keys";
+        gpios = <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        label = "Charger status";
+    };
+};
