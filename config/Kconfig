@@ -306,6 +306,17 @@ config RGBLED_WIDGET_LAYER_31_COLOR
 
 endif # RGBLED_WIDGET
 
+config DONGLE_INDICATOR
+    bool "Enable dongle LED indicator for peripheral connection status"
+    depends on ZMK_SPLIT_ROLE_CENTRAL
+
+if DONGLE_INDICATOR
+
+config LED
+    default y
+
+endif # DONGLE_INDICATOR
+
 DT_COMPAT_ZMK_BEHAVIOR_RGBLED_WIDGET := zmk,behavior-rgbled-widget
 
 config ZMK_BEHAVIOR_RGBLED_WIDGET

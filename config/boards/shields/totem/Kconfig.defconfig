@@ -1,6 +1,7 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
+# Dongle is central, outputs via USB or BLE to host
 if SHIELD_TOTEM_DONGLE
 
 config ZMK_KEYBOARD_NAME
@@ -14,7 +15,7 @@ config ZMK_USB
 
 endif
 
-if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT || SHIELD_TOTEM_DONGLE
+if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_LEFT_DONGLE || SHIELD_TOTEM_RIGHT || SHIELD_TOTEM_DONGLE
 
 config ZMK_SPLIT
     default y

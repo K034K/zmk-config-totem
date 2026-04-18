@@ -1,0 +1,6 @@
+/*
+ * Left half as peripheral (for use with dongle).
+ * Same hardware as totem_left, but without central role.
+ */
+
+#include "totem_left.overlay"

@@ -7,5 +7,8 @@ config SHIELD_TOTEM_LEFT
 config SHIELD_TOTEM_RIGHT
     def_bool $(shields_list_contains,totem_right)
 
+config SHIELD_TOTEM_LEFT_DONGLE
+    def_bool $(shields_list_contains,totem_left_dongle)
+
 config SHIELD_TOTEM_DONGLE
     def_bool $(shields_list_contains,totem_dongle)
