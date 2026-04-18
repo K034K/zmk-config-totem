@@ -1,7 +1,7 @@
 /*
  * Dongle connection indicator
  * Shows how many keyboard halves are connected via the XIAO's built-in LED:
- *   0 connected: LED off
+ *   0 connected: RED (searching)
  *   1 connected: RED
  *   2 connected: BLUE for 60 seconds, then LED off
  */
@@ -96,9 +96,9 @@ static int dongle_indicator_init(void) {
     }
 
     k_work_init_delayable(&led_off_work, led_off_work_handler);
-    all_leds_off();
+    set_led_red();
 
-    LOG_INF("Dongle indicator initialized");
+    LOG_INF("Dongle indicator initialized, LED red (searching for halves)");
     return 0;
 }
 
